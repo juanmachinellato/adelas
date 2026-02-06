@@ -1,0 +1,733 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Adela’s Coffee Restobar</title>
+  <meta name="description" content="Adela’s Coffee Restobar — Desayuno, almuerzo, merienda y cena en Caseros. Menú ordenado, promos y cómo llegar." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body id="top">
+  <div class="bg">
+  <div class="blob b1"></div>
+  <div class="blob b2"></div>
+  <div class="blob b3"></div>
+  <div class="grain"></div>
+</div>
+  <!-- Top bar -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a class="brand" href="#top" aria-label="Ir al inicio">
+        <img class="brand__logo" src="logo.png" alt="Adela’s Coffee Restobar" />
+      </a>
+
+      <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="nav">
+        <a href="#menu">Menú</a>
+        <a href="#galeria">Galería</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Ambient background -->
+  <div class="bg">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+    <div class="grain"></div>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" aria-label="Portada">
+  <div class="hero__bg" data-parallax="0.20" style="background-image:url('assets/restaurante/restaurante1.jpeg');"></div>
+  <div class="hero__overlay"></div>
+
+  <div class="hero__content">
+    <img src="logo.png" alt="Adela's Coffee Restobar" class="hero__logo" />
+
+    <p class="hero__tag">CAFÉ · RESTOBAR · CASEROS</p>
+
+    <div class="hero__cta">
+      <a class="btn btn--gold" href="#menu">Ver menú</a>
+      <a class="btn btn--ghost" href="#contacto">Cómo llegar</a>
+    </div>
+
+    <div class="hero__chips">
+      <span class="chip">Todos los días</span>
+      <span class="chip">7:30 → 01:00</span>
+      <span class="chip">Desayuno · Almuerzo · Merienda · Cena</span>
+    </div>
+  </div>
+
+  <a class="scrollHint" href="#menu" aria-label="Bajar">
+    <span></span>
+  </a>
+</section>
+
+  <!-- DESTACADOS -->
+  <section class="section" id="destacados">
+    <div class="container">
+      <div class="kicker reveal">RECOMENDADOS</div>
+      <h2 class="title reveal">Lo más pedido</h2>
+
+      <div class="hScroll reveal" aria-label="Destacados">
+        <article class="hCard">
+          <div class="hCard__top">
+            <span class="pill">Top</span>
+            <span class="price">$12.500</span>
+          </div>
+          <h3>Sorrentinos caseros</h3>
+          <p>Rellenos de jamón y mozzarella, con salsa filetto o crema.</p>
+        </article>
+
+        <article class="hCard">
+          <div class="hCard__top">
+            <span class="pill">Fresco</span>
+            <span class="price">$9.800</span>
+          </div>
+          <h3>Ñoquis de papa</h3>
+          <p>Hechos en casa, con salsa boloñesa o pesto,</p>
+        </article>
+
+        <article class="hCard">
+          <div class="hCard__top">
+            <span class="pill">Clásico</span>
+            <span class="price">$11.200</span>
+          </div>
+          <h3>Milanesa con papas</h3>
+          <p>De ternera o pollo, con guarnición a elección.</p>
+        </article>
+
+        <article class="hCard">
+          <div class="hCard__top">
+            <span class="pill">Liviano</span>
+            <span class="price">$8.900</span>
+          </div>
+          <h3>Ensalada César</h3>
+          <p>Pollo grillado, croutons y aderezo clásico.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section class="section section--alt" id="menu">
+    <div class="container">
+      <h2 class="title reveal">MENÚ</h2>
+      <p class="lead reveal">
+        Tocá una categoría y listo. También podés buscar por nombre.
+      </p>
+
+      <div class="menuTools reveal">
+        <div class="tabs" id="tabs" role="tablist" aria-label="Categorías">
+          <button class="tab is-active" data-filter="all" role="tab">Todo</button>
+          <button class="tab" data-filter="desayuno" role="tab">Desayuno & Merienda</button>
+          <button class="tab" data-filter="liviano" role="tab">Platos livianos</button>
+          <button class="tab" data-filter="carnes" role="tab">Carnes & Aves</button>
+          <button class="tab" data-filter="pastas" role="tab">Pastas</button>
+          <button class="tab" data-filter="pizzas" role="tab">Pizzas</button>
+          <button class="tab" data-filter="mar" role="tab">Mar & Especiales</button>
+          <button class="tab" data-filter="compartir" role="tab">Para compartir</button>
+          <button class="tab" data-filter="empanadas" role="tab">Empanadas</button>
+          <button class="tab" data-filter="bebidas" role="tab">Bebidas</button>
+        </div>
+
+        <label class="search">
+          <span>Buscar</span>
+          <input id="searchInput" type="search" placeholder="Ej: milanesa, rúcula, ravioles..." />
+        </label>
+      </div>
+
+      <div class="menuGrid" id="menuGrid">
+
+        <!-- Desayuno & Merienda -->
+        <section class="menuBlock reveal" data-cat="desayuno">
+          <h3 class="menuTitle">Desayuno & Merienda</h3>
+
+          <div class="menuRow">
+            <div class="left">
+              <div class="dish">Docena de medialunas (manteca)</div>
+              <div class="desc">Exquisitas medialunas de la casa.</div>
+            </div>
+            <div class="right">
+              <div class="price">$15.000</div>
+            </div>
+          </div>
+
+          <div class="menuNote">
+            *Si tenés la carta de desayunos completa (cafés, tostados, etc.), la sumamos acá y queda 10/10.
+          </div>
+        </section>
+
+        <!-- Livianos -->
+        <section class="menuBlock reveal" data-cat="liviano">
+          <h3 class="menuTitle">Platos livianos</h3>
+
+          <div class="menuRow">
+            <div class="left">
+              <div class="dish">Wok de Pollo</div>
+              <div class="desc">Salteado oriental de vegetales y tiritas de pollo con soja y sésamo.</div>
+            </div>
+            <div class="right"><div class="price">$25.000</div></div>
+          </div>
+
+          <div class="menuRow">
+            <div class="left">
+              <div class="dish">Omelette de Jamón y Queso</div>
+              <div class="desc">Acompañado de ensalada tricolor (zanahoria, huevo y tomate).</div>
+            </div>
+            <div class="right"><div class="price">$22.000</div></div>
+          </div>
+
+          <div class="menuRow">
+            <div class="left">
+              <div class="dish">Omelette de Espinacas</div>
+              <div class="desc">Port salut, tomates cherry y mix de verdes.</div>
+            </div>
+            <div class="right"><div class="price">$22.000</div></div>
+          </div>
+
+          <div class="menuRow">
+            <div class="left">
+              <div class="dish">Risotto Vegetariano</div>
+              <div class="desc">Carnaroli con azafrán, hongos, calabaza, pimientos, espárragos, verdeo y queso.</div>
+            </div>
+            <div class="right"><div class="price">$25.000</div></div>
+          </div>
+
+          <div class="menuRow">
+            <div class="left">
+              <div class="dish">Ensalada Caesar con Pollo</div>
+              <div class="desc">Romana, parmesano, pollo, croutones y aderezo Caesar.</div>
+            </div>
+            <div class="right"><div class="price">$22.000</div></div>
+          </div>
+
+          <div class="menuRow">
+            <div class="left">
+              <div class="dish">Ensalada Crispy</div>
+              <div class="desc">Pollo crujiente, mix de lechugas, huevo duro, jamón, queso y mostaza dulce.</div>
+            </div>
+            <div class="right"><div class="price">$22.000</div></div>
+          </div>
+        </section>
+
+        <!-- Carnes & Aves -->
+        <section class="menuBlock reveal" data-cat="carnes">
+          <h3 class="menuTitle">Carnes & Aves</h3>
+
+          <div class="menuSub">Aves</div>
+          <div class="menuRow">
+            <div class="left">
+              <div class="dish">Suprema de Pollo Grillé</div>
+              <div class="desc">Con papas fritas o puré o ensalada.</div>
+            </div>
+            <div class="right"><div class="price">$24.000</div></div>
+          </div>
+
+          <div class="menuSub">Minutas</div>
+          <div class="menuRow">
+            <div class="left"><div class="dish">Milanesa + fritas / ensalada / puré</div></div>
+            <div class="right"><div class="price">$24.000</div></div>
+          </div>
+
+          <div class="menuRow">
+            <div class="left"><div class="dish">Milanesa Napolitana + guarnición</div></div>
+            <div class="right"><div class="price">$35.000</div></div>
+          </div>
+
+          <div class="menuRow">
+            <div class="left"><div class="dish">Suprema + fritas / ensalada / puré</div></div>
+            <div class="right"><div class="price">$24.000</div></div>
+          </div>
+
+          <div class="menuRow">
+            <div class="left"><div class="dish">Suprema Napolitana + guarnición</div></div>
+            <div class="right"><div class="price">$35.000</div></div>
+          </div>
+
+          <div class="menuRow">
+            <div class="left">
+              <div class="dish">Milanesa Al Champion</div>
+              <div class="desc">Cheddar, pimientos asados, huevo frito, papas fritas y ensalada.</div>
+            </div>
+            <div class="right"><div class="price">$38.000</div></div>
+          </div>
+
+          <div class="menuRow">
+            <div class="left">
+              <div class="dish">Suprema de Pollo a la Suiza</div>
+              <div class="desc">Bechamel, mozzarella, gratín de parmesano y papas cuadrillé.</div>
+            </div>
+            <div class="right"><div class="price">$35.000</div></div>
+          </div>
+
+          <div class="menuRow">
+            <div class="left"><div class="dish">Papas fritas (porción grande)</div></div>
+            <div class="right"><div class="price">$18.000</div></div>
+          </div>
+
+          <div class="menuRow">
+            <div class="left"><div class="dish">Puré de papas</div></div>
+            <div class="right"><div class="price">$18.000</div></div>
+          </div>
+
+          <div class="menuSub">Cortes de carne</div>
+          <div class="menuRow">
+            <div class="left">
+              <div class="dish">Matambre Adela’s</div>
+              <div class="desc">Gratinado con muzzarella, panceta, orégano y morrón asado, con papas bastón.</div>
+            </div>
+            <div class="right"><div class="price">$40.000</div></div>
+          </div>
+
+          <div class="menuRow">
+            <div class="left">
+              <div class="dish">Lomo Clásico</div>
+              <div class="desc">Con papas fritas y bouquet de ensalada tricolor.</div>
+            </div>
+            <div class="right"><div class="price">$37.000</div></div>
+          </div>
+
+          <div class="menuRow">
+            <div class="left">
+              <div class="dish">Fricassé de Ternera</div>
+              <div class="desc">Con crema, verdeo y papas cuadrillé.</div>
+            </div>
+            <div class="right"><div class="price">$27.000</div></div>
+          </div>
+
+          <div class="menuSub">Cerdo</div>
+          <div class="menuRow">
+            <div class="left">
+              <div class="dish">Grill de Chuletas de Cerdo</div>
+              <div class="desc">Con papas fritas y ensalada tricolor.</div>
+            </div>
+            <div class="right"><div class="price">$25.000</div></div>
+          </div>
+
+          <div class="menuRow">
+            <div class="left">
+              <div class="dish">Chuletas de Cerdo Villeroy</div>
+              <div class="desc">Crema + mostaza, timbal de puré, vegetales, dip de ensalada y berenjenas.</div>
+            </div>
+            <div class="right"><div class="price">$27.000</div></div>
+          </div>
+        </section>
+
+        <!-- Pastas -->
+        <section class="menuBlock reveal" data-cat="pastas">
+          <h3 class="menuTitle">Pastas</h3>
+
+          <div class="menuSub">Clásicas</div>
+          <div class="menuRow">
+            <div class="left"><div class="dish">Gnocchis</div><div class="desc">Con salsa a elección.</div></div>
+            <div class="right"><div class="price">$18.000</div></div>
+          </div>
+
+          <div class="menuRow">
+            <div class="left"><div class="dish">Tagliatelles</div><div class="desc">Cinta ancha, con salsa a elección.</div></div>
+            <div class="right"><div class="price">$18.000</div></div>
+          </div>
+
+          <div class="menuRow">
+            <div class="left"><div class="dish">Fetuccine al Huevo</div><div class="desc">Con salsa a elección.</div></div>
+            <div class="right"><div class="price">$18.000</div></div>
+          </div>
+
+          <div class="menuSub">Rellenas</div>
+          <div class="menuRow">
+            <div class="left"><div class="dish">Ravioles de Verdura y Pollo</div><div class="desc">Con salsa a elección.</div></div>
+            <div class="right"><div class="price">$23.000</div></div>
+          </div>
+
+          <div class="menuRow">
+            <div class="left"><div class="dish">Cannellonis</div><div class="desc">Espinaca, jamón y pollo. Salsa a elección.</div></div>
+            <div class="right"><div class="price">$23.000</div></div>
+          </div>
+
+          <div class="menuRow">
+            <div class="left"><div class="dish">Sorrentinos</div><div class="desc">Mozzarella y jamón natural. Salsa a elección.</div></div>
+            <div class="right"><div class="price">$23.000</div></div>
+          </div>
+
+          <div class="menuRow">
+            <div class="left"><div class="dish">Lasaña</div><div class="desc">Ricota, jamón, mozzarella, espinacas y pollo. Salsa a elección.</div></div>
+            <div class="right"><div class="price">$25.000</div></div>
+          </div>
+
+          <div class="menuSub">Especiales</div>
+          <div class="menuRow">
+            <div class="left"><div class="dish">Sorrentinos Bivonesa</div><div class="desc">Crema, verdeo, pollo y nueces.</div></div>
+            <div class="right"><div class="price">$27.000</div></div>
+          </div>
+
+          <div class="menuRow">
+            <div class="left"><div class="dish">Ravioli Rustici</div><div class="desc">Crema de verdeo, parmesano y pesto genovés.</div></div>
+            <div class="right"><div class="price">$27.000</div></div>
+          </div>
+        </section>
+
+        <!-- Pizzas -->
+        <section class="menuBlock reveal" data-cat="pizzas">
+          <h3 class="menuTitle">Pizzas</h3>
+
+          <div class="menuSub">Clásicas</div>
+          <div class="menuRow">
+            <div class="left"><div class="dish">Pizza Muzzarella</div><div class="desc">Clásica a la piedra.</div></div>
+            <div class="right"><div class="price">$27.000</div></div>
+          </div>
+
+          <div class="menuRow">
+            <div class="left"><div class="dish">Pizza Napolitana</div><div class="desc">Tomate, muzza, tomates frescos, jamón, aceitunas y orégano.</div></div>
+            <div class="right"><div class="price">$34.000</div></div>
+          </div>
+
+          <div class="menuRow">
+            <div class="left"><div class="dish">Muzzarella + Jamón</div></div>
+            <div class="right"><div class="price">$30.000</div></div>
+          </div>
+
+          <div class="menuRow">
+            <div class="left"><div class="dish">Muzzarella + Jamón y Huevo</div></div>
+            <div class="right"><div class="price">$34.000</div></div>
+          </div>
+
+          <div class="menuRow">
+            <div class="left"><div class="dish">Muzzarella + Jamón y Morrones</div></div>
+            <div class="right"><div class="price">$34.000</div></div>
+          </div>
+
+          <div class="menuRow">
+            <div class="left"><div class="dish">Fugazza con Queso</div></div>
+            <div class="right"><div class="price">$31.000</div></div>
+          </div>
+
+          <div class="menuSub">Especiales</div>
+          <div class="menuRow">
+            <div class="left"><div class="dish">Rúcula y Queso Provolone</div><div class="desc">Tomates secos, aceitunas negras y parmesano.</div></div>
+            <div class="right"><div class="price">$35.000</div></div>
+          </div>
+
+          <div class="menuRow">
+            <div class="left"><div class="dish">Rúcula y Jamón Serrano</div><div class="desc">Aceitunas negras y parmesano.</div></div>
+            <div class="right"><div class="price">$38.000</div></div>
+          </div>
+
+          <div class="menuRow">
+            <div class="left"><div class="dish">Fainá</div><div class="desc">Para acompañar nuestras pizzas.</div></div>
+            <div class="right"><div class="price">$3.000</div></div>
+          </div>
+
+          <div class="menuSub">Sándwiches en pan de pizza</div>
+          <div class="menuRow">
+            <div class="left"><div class="dish">Sándwich de Ternera + papas</div><div class="desc">Milanesa de ternera con papas fritas.</div></div>
+            <div class="right"><div class="price">$26.000</div></div>
+          </div>
+
+          <div class="menuRow">
+            <div class="left"><div class="dish">Sándwich Ternera JyQ + papas</div></div>
+            <div class="right"><div class="price">$35.000</div></div>
+          </div>
+
+          <div class="menuRow">
+            <div class="left"><div class="dish">Sándwich Ternera Completa</div><div class="desc">Jamón, queso, tomate, lechuga, huevo frito + papas.</div></div>
+            <div class="right"><div class="price">$37.000</div></div>
+          </div>
+        </section>
+
+        <!-- Mar & Especiales -->
+        <section class="menuBlock reveal" data-cat="mar">
+          <h3 class="menuTitle">Mar & Especiales</h3>
+
+          <div class="menuSub">Comida de mar</div>
+          <div class="menuRow">
+            <div class="left"><div class="dish">Salmón Rosado de La Rompiente</div><div class="desc">Crema de camarones, mejillones, alcaparras y calabaza.</div></div>
+            <div class="right"><div class="price">$46.000</div></div>
+          </div>
+
+          <div class="menuRow">
+            <div class="left"><div class="dish">Grill de Salmón</div><div class="desc">Papas bastón y ensalada verde con brotes y hongos.</div></div>
+            <div class="right"><div class="price">$40.000</div></div>
+          </div>
+
+          <div class="menuRow">
+            <div class="left"><div class="dish">Merluza a la Romana</div><div class="desc">Con guarnición a elección.</div></div>
+            <div class="right"><div class="price">$24.000</div></div>
+          </div>
+
+          <div class="menuSub">Especiales (Pascuas)</div>
+          <div class="menuRow">
+            <div class="left"><div class="dish">Empanadas de Vigilia</div><div class="desc">Atún, cebolla, morrón y huevo.</div></div>
+            <div class="right"><div class="price">$4.000</div></div>
+          </div>
+
+          <div class="menuRow">
+            <div class="left"><div class="dish">Pacu</div><div class="desc">Manteca, perejil, ajo confitado, cherrys, vino blanco y papas noisette.</div></div>
+            <div class="right"><div class="price">$30.000</div></div>
+          </div>
+
+          <div class="menuRow">
+            <div class="left"><div class="dish">Paella</div><div class="desc">Arroz azafranado con langostinos, mejillones y vegetales.</div></div>
+            <div class="right"><div class="price">$40.000</div></div>
+          </div>
+
+          <div class="menuRow">
+            <div class="left"><div class="dish">Cazuela de Mariscos</div><div class="desc">Mariscos, vegetales, tomate concentrado, arvejas y papas españolas.</div></div>
+            <div class="right"><div class="price">$45.000</div></div>
+          </div>
+
+          <div class="menuRow">
+            <div class="left"><div class="dish">Trucha</div><div class="desc">Al grill con vegetales horneados y salsa de vino chablis.</div></div>
+            <div class="right"><div class="price">$40.000</div></div>
+          </div>
+        </section>
+
+        <!-- Para compartir -->
+        <section class="menuBlock reveal" data-cat="compartir">
+          <h3 class="menuTitle">Para compartir</h3>
+
+          <div class="menuRow">
+            <div class="left">
+              <div class="dish">PROMO — Pollo al horno + 2 guarniciones</div>
+              <div class="desc">Pollo entero con papas y ensalada.</div>
+            </div>
+            <div class="right"><div class="price">$43.000</div></div>
+          </div>
+
+          <div class="menuSub">Appetizers</div>
+          <div class="menuRow">
+            <div class="left"><div class="dish">Rabas a la Romana</div></div>
+            <div class="right"><div class="price">$33.000</div></div>
+          </div>
+
+          <div class="menuRow">
+            <div class="left"><div class="dish">Rabas a la Provenzal</div></div>
+            <div class="right"><div class="price">$33.000</div></div>
+          </div>
+
+          <div class="menuRow">
+            <div class="left"><div class="dish">Muzzarella Sticks</div><div class="desc">Rúcula, cherry, salsa marinera y papas.</div></div>
+            <div class="right"><div class="price">$26.000</div></div>
+          </div>
+
+          <div class="menuRow">
+            <div class="left"><div class="dish">Papas Adela’s</div><div class="desc">Crema, panceta, huevo revuelto y ciboulette.</div></div>
+            <div class="right"><div class="price">$22.000</div></div>
+          </div>
+
+          <div class="menuRow">
+            <div class="left"><div class="dish">Papas Alemanas</div><div class="desc">Papas + dúo de vienas con cheddar y nachos crujientes.</div></div>
+            <div class="right"><div class="price">$22.000</div></div>
+          </div>
+
+          <div class="menuSub">Woks</div>
+          <div class="menuRow">
+            <div class="left"><div class="dish">Chow Fan</div><div class="desc">Lomo con vegetales, huevo y arroz oriental.</div></div>
+            <div class="right"><div class="price">$25.000</div></div>
+          </div>
+
+          <div class="menuRow">
+            <div class="left"><div class="dish">Chow Mien</div><div class="desc">Fettuccine salteados con vegetales clásicos orientales.</div></div>
+            <div class="right"><div class="price">$25.000</div></div>
+          </div>
+
+          <div class="menuSub">Risottos</div>
+          <div class="menuRow">
+            <div class="left"><div class="dish">Risotto Milanese</div><div class="desc">Azafrán, parmesano, panceta, lomo y vegetales.</div></div>
+            <div class="right"><div class="price">$23.000</div></div>
+          </div>
+
+          <div class="menuSub">Extras sueltos</div>
+          <div class="menuRow">
+            <div class="left"><div class="dish">Risoto con Vegetales</div></div>
+            <div class="right"><div class="price">$9.544</div></div>
+          </div>
+
+          <div class="menuRow">
+            <div class="left"><div class="dish">Ñoquis (porción)</div></div>
+            <div class="right"><div class="price">$10.000</div></div>
+          </div>
+
+          <div class="menuSub">Promo</div>
+          <div class="menuRow">
+            <div class="left"><div class="dish">2 Fetuccine al Huevo (hasta 50% off)</div><div class="desc">Salsa de tomate / mixta / blanca sin cargo.</div></div>
+            <div class="right"><div class="price">$33.000</div></div>
+          </div>
+        </section>
+
+        <!-- Empanadas -->
+        <section class="menuBlock reveal" data-cat="empanadas">
+          <h3 class="menuTitle">Empanadas</h3>
+
+          <div class="menuRow">
+            <div class="left"><div class="dish">Empanada de Pollo</div></div>
+            <div class="right"><div class="price">$4.000</div></div>
+          </div>
+
+          <div class="menuRow">
+            <div class="left"><div class="dish">Empanada de Carne Suave</div></div>
+            <div class="right"><div class="price">$4.000</div></div>
+          </div>
+
+          <div class="menuRow">
+            <div class="left"><div class="dish">Empanada de Jamón y Queso</div></div>
+            <div class="right"><div class="price">$4.000</div></div>
+          </div>
+
+          <div class="menuRow">
+            <div class="left"><div class="dish">Empanada de Espinaca con Salsa Blanca</div></div>
+            <div class="right"><div class="price">$4.000</div></div>
+          </div>
+
+          <div class="menuRow">
+            <div class="left"><div class="dish">4 empanadas a elección</div></div>
+            <div class="right"><div class="price">$16.000</div></div>
+          </div>
+
+          <div class="menuRow">
+            <div class="left"><div class="dish">Docena de empanadas</div></div>
+            <div class="right"><div class="price">$42.000</div></div>
+          </div>
+        </section>
+
+        <!-- Bebidas -->
+        <section class="menuBlock reveal" data-cat="bebidas">
+          <h3 class="menuTitle">Bebidas</h3>
+
+          <div class="menuSub">Gaseosas</div>
+          <div class="menuRow">
+            <div class="left"><div class="dish">Pepsi 1.5 L</div></div>
+            <div class="right"><div class="price">$9.000</div></div>
+          </div>
+
+          <div class="menuRow">
+            <div class="left"><div class="dish">Pepsi Zero 1.5 L</div></div>
+            <div class="right"><div class="price">$9.000</div></div>
+          </div>
+
+          <div class="menuRow">
+            <div class="left"><div class="dish">Coca Cola 1.75 L</div></div>
+            <div class="right"><div class="price">$9.000</div></div>
+          </div>
+
+          <div class="menuRow">
+            <div class="left"><div class="dish">Coca Cola Sin Azúcares 1.75 L</div></div>
+            <div class="right"><div class="price">$9.000</div></div>
+          </div>
+
+          <div class="menuRow">
+            <div class="left"><div class="dish">7Up Free 1.5 L</div></div>
+            <div class="right"><div class="price">$9.000</div></div>
+          </div>
+
+          <div class="menuRow">
+            <div class="left"><div class="dish">Bebida 354 ml</div></div>
+            <div class="right"><div class="price">$5.000</div></div>
+          </div>
+
+          <div class="menuSub">Cervezas</div>
+          <div class="menuRow">
+            <div class="left"><div class="dish">Quilmes Clásica lata 473 ml</div></div>
+            <div class="right"><div class="price">$9.000</div></div>
+          </div>
+
+          <div class="menuRow">
+            <div class="left"><div class="dish">Quilmes Stout 473 ml</div><div class="desc">Notas de chocolate y café.</div></div>
+            <div class="right"><div class="price">$9.000</div></div>
+          </div>
+
+          <div class="menuRow">
+            <div class="left"><div class="dish">Stella Artois 975 ml (envase incluido)</div></div>
+            <div class="right"><div class="price">$12.000</div></div>
+          </div>
+
+          <div class="menuRow">
+            <div class="left"><div class="dish">Corona rubia 710 ml</div></div>
+            <div class="right"><div class="price">$12.000</div></div>
+          </div>
+
+          <div class="menuRow">
+            <div class="left"><div class="dish">Patagonia 24.7 Session IPA 730 ml</div></div>
+            <div class="right"><div class="price">$12.000</div></div>
+          </div>
+        </section>
+
+      </div>
+
+      <div class="center reveal">
+        <a class="btn btn--primary" href="#contacto">Reservas / Consultas</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERIA -->
+  <section class="section" id="galeria">
+  <div class="container">
+    <h2 class="title reveal">GALERIA</h2>
+
+    <div class="gallery">
+  <div class="gItem"><img src="galeria1.jpeg" alt="Plato 1" loading="lazy"></div>
+  <div class="gItem"><img src="galeria2.jpeg" alt="Plato 2" loading="lazy"></div>
+  <div class="gItem"><img src="galeria3.jpeg" alt="Plato 3" loading="lazy"></div>
+  <div class="gItem"><img src="galeria4.jpeg" alt="Plato 4" loading="lazy"></div>
+  <div class="gItem"><img src="galeria5.jpeg" alt="Plato 5" loading="lazy"></div>
+  <div class="gItem"><img src="galeria6.jpeg" alt="Plato 6" loading="lazy"></div>
+</div>
+  </div>
+</section>
+
+  <!-- CONTACTO -->
+  <section class="section section--alt" id="contacto">
+    <div class="container">
+      <div class="kicker reveal">CONTACTO</div>
+      <h2 class="title reveal">Cómo llegar / Reservas</h2>
+
+      <div class="contactGrid">
+        <div class="contactCard reveal">
+          <h3>Teléfono</h3>
+<p class="muted">
+  <a class="link" href="tel:+541147165317">4716-5317</a> ·
+  <a class="link" href="tel:+541147162081">4716-2081</a>
+</p>
+
+<div class="contactBtns">
+  <a class="btn btn--primary" href="tel:+541147165317">📞 Llamar</a>
+  
+
+  <a class="btn btn--icon" href="https://www.instagram.com/adelas.caseros">
+    <img src="instagram.png" alt="Instagram">
+    Instagram
+  </a>
+</div>
+
+          
+          </div>
+        </div>
+
+        <div class="map-wrapper reveal">
+          <!-- TU IFRAME -->
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4237.4792438488985!2d-58.56687602327724!3d-34.6056909576041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb82368101e35%3A0x42245d91f1156bf3!2sAdela&#39;s!5e1!3m2!1ses!2sar!4v1770329171696!5m2!1ses!2sar"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            aria-label="Mapa de Adela’s">
+          </iframe>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <span>© Adela’s Coffee Restobar</span>
+        <a href="#top">Volver arriba ↑</a>
+      </footer>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
