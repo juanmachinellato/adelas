@@ -109,8 +109,6 @@ html{
   border-bottom: 1px solid rgba(255,255,255,.18);
 }
 .header__inner{
-  width:min(1100px, 92vw);
-  margin: 0 4vw auto;
   display:flex;
   align-items:center;
   justify-content:space-between;
@@ -706,3 +704,19 @@ html, body{
   height:18px;
   object-fit:contain;
 }
+
+@media (min-width: 900px) {
+
+  .nav{
+    position: static;
+    display: flex !important;
+    flex-direction: row;
+    gap: 16px;
+    background: none;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+  }
+
+}
+
