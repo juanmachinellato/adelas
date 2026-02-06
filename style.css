@@ -378,6 +378,7 @@ html{
   overflow:hidden;
 }
 .hCard::before{
+  display: none !important;
   content:"";
   position:absolute;
   inset: 0;
